@@ -86,15 +86,13 @@ function analisarCredito2() {
 ```
 Se ambas as funções forem executadas com os valores fornecidos, qual será a saída exibida no console?
 
-**A) Ambas as funções exibirão: 'Seu crédito foi aprovado. Saldo disponível: 400.'**
+A) Ambas as funções exibirão: 'Seu crédito foi negado. Saldo disponível: -600.'
 
 B) analisarCredito1() exibirá: 'Seu crédito foi negado. Saldo disponível: -600.', enquanto analisarCredito2() exibirá: 'Seu crédito foi negado. Saldo disponível: -200.'
 
-C) analisarCredito1() exibirá: 'Seu crédito foi negado. Saldo disponível: -200.', enquanto analisarCredito2() exibirá: 'Seu crédito foi aprovado. Saldo disponível: 100.'
+C) analisarCredito1() exibirá: 'Seu crédito foi negado. Saldo disponível: -200.', enquanto analisarCredito2() exibirá: 'Seu crédito foi negado. Saldo disponível: -600.'
 
-D) Ambas as funções exibirão: 'Seu crédito foi aprovado Saldo disponível: 500.'
-
-**Resposta: A**
+D) Ambas as funções exibirão: 'Seu crédito foi negado. Saldo disponível: -200.'
 ______
 
 **3)** Considere o seguinte trecho de código em JavaScript:
@@ -191,6 +189,7 @@ Dispositivo 4 não pode ser ligado. Energia insuficiente.
 Dispositivo 5 não pode ser ligado. Energia insuficiente.
 
 **Resposta: D**
+
 ______
 
 **5)** Qual é a principal função do método update() em um jogo desenvolvido com Phaser.js?
@@ -221,6 +220,7 @@ C) Renderizar gráficos otimizados para jogos 2D e garantir uma taxa de quadros 
 D) Criar animações automáticas para sprites e objetos interativos sem necessidade de programação de movimentação.
 
 **Resposta: A**
+
 ______
 
 # Questões dissertativas
@@ -236,18 +236,17 @@ Pedidos entre R$50,00 e R$199,99 (inclusive) → "Frete com custo adicional!"
 Pedidos de R$200,00 ou mais → "Frete grátis!"
 ```
 Implemente um pseudocódigo que receba o valor total da compra e exiba a classificação correta do frete para o cliente.
-
-**Resposta:**
-```
-total <- Input: "Insira o valor total da compra: R$"
-se o total > 50:
-    Imprima ("Frete não disponível!")
-se total > 50 e total < 199.99:
-    Imprima ("Frete com custo adicional!")
-se total > 200:
-    Imprima ("Frete grátis!")
-```
 ______
+**Resposta:**
+total = Input: "Insira o valor total da compra: R$"
+se o total > 50:
+    Imprima "Frete não disponível!"
+se total > 50 e total < 199.99:
+    Imprima "Frete com custo adicional!"
+se total > 200:
+    Imprima "Frete grátis!"
+
+
 
 **8)** Considere a implementação da classe base Veiculo em um sistema de modelagem de veículos. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Carro e Moto, que herdam da classe Veiculo, adicionando atributos específicos e métodos para calcular o consumo de combustível de um carro e de uma moto, respectivamente.
 
@@ -266,7 +265,6 @@ Implementação genérica para cálculo de consumo, a ser sobrescrita pelas subc
 Agora, implemente as classes Carro e Moto, garantindo que ambas herdem de Veiculo e possuam métodos específicos para calcular o consumo de combustível com base na quilometragem e eficiência do veículo.
 
 **Resposta:** 
-```
 Classe Carro é derivada da classe Veiculo:
 Atributos:
 
@@ -275,9 +273,9 @@ eficiencia
 Método Construtor(modelo, ano, quilometragem, eficiencia):
 Método Super(modelo, ano)
 
-consumo <- 0
+consumo = 0
 Método CalcularConsumo():
-   consumo <- quilometragem * eficiencia
+   consumo = quilometragem * eficiencia
     Imprima o consumo
 
 Classe Moto é derivada da classe Veiculo:
@@ -288,12 +286,10 @@ eficiencia
 Método Construtor(modelo, ano, quilometragem, eficiencia):
 Método Super(modelo, ano)
 
-consumo <- 0
+consumo = 0
 Método CalcularConsumo():
-   consumo <- (quilometragem/2) * eficiencia
+   consumo = (quilometragem/2) * eficiencia
    Imprima o consumo
-
-```
 ______
 
 **9)** Você é um cientista da NASA e está ajudando no desenvolvimento de um sistema de pouso para sondas espaciais em Marte. Seu objetivo é calcular o tempo necessário para que a sonda reduza sua velocidade até um nível seguro para pouso, considerando uma velocidade inicial de entrada na atmosfera marciana e uma taxa de desaceleração constante causada pelo atrito atmosférico e retrofoguetes.
@@ -307,39 +303,18 @@ Considere a fórmula de atualização velocidade:
     velocidade = velocidadeInicial - desaceleracao * tempo
 ```
 Seu programa deve determinar quanto tempo será necessário para que a sonda atinja uma velocidade segura de pouso, sem ultrapassar os limites estabelecidos.
-
+REVISAR
 **Resposta:** 
-```
-Função calcularTempoPouso(velocidadeInicial, desaceleracao, velocidadeLimite, velocidadeSegura, tempoMaximo):
-    tempo ← 0
-    velocidade ← velocidadeInicial
-    
-    #loop que vai calcular o valor da velocidade a cada instante de tempo
-    Enquanto tempo <= tempoMaximo:
-        velocidade ← velocidadeInicial - desaceleracao * tempo
-        
-        Se (velocidade < velocidadeLimite) então:
-            Imprima("Perigo de instabilidade no pouso!")
-            Saia do loop
-        
-        Se (velocidade <= velocidadeSegura) então:
-            Imprima("A sonda atingiu uma velocidade segura para pouso após " + tempo + " segundos.")
-            Saia do loop
-        
-        tempo ← tempo + 1
-    
-    Imprima("Tempo máximo atingido sem alcançar a velocidade segura para pouso.")
+tempoMáximo = tempoMáximo;
+limiteMínimo = limiteMínimo;
+velocidadeInicial = velocidadeInicial;
+desaceleração = desaceleração;
 
-# Exemplo:
-velocidadeInicial ← 1000   
-desaceleracao ← 100        
-velocidadeSegura ← 150      
-velocidadeLimite ← 100           
-tempoMaximo ← 50       
+Para uma variável tempo que se inicia em 0, itere sobre ela adicionando uma unidade de cada vez enquanto o valor dela for menor ou igual ao tempoMáximo:
+    Enquanto velocidade > limiteMínimo:
+        velocidade = velocidadeInicial - desaceleracao * tempo
 
-calcularTempoPouso(velocidadeInicial, desaceleracao, velocidadeLimite, velocidadeSegura, tempoMaximo)
-    # A saída esperada é 'A sonda atingiu uma velocidade segura para pouso após 9 segundos.'
-```
+console.log(tempo);
 ______
 
 **10)** Em um sistema de análise financeira, as operações de investimento de uma empresa podem ser representadas por matrizes, onde cada linha representa um tipo de investimento e cada coluna representa um período de tempo.
@@ -372,31 +347,3 @@ Escrever("Total de investimentos acumulados:")
 ImprimirMatriz(totalInvestimentos)  
 ```
 Agora, implemente a função MultiplicarMatrizesInvestimento(matrizA, matrizB), que multiplica as duas matrizes, simulando o efeito de diferentes fatores de crescimento e impacto financeiro nos investimentos ao longo do tempo.
-
-**Resposta:** 
-```
-Função MultiplicarMatrizesInvestimento(matrizA, matrizB):
-    #Verifica se o número de colunas da matrizA é igual ao número de linhas da matrizB
-    Se tamanho(matrizA[0]) ≠ tamanho(matrizB) então:
-        Retornar 'Não é possível multiplicar essas matrizes.'
-    Senão:
-        linhas <- tamanho(matrizA)  
-        colunas <- tamanho(matrizB[0])  
-        matrizResultado <- novaMatriz(linhas, colunas)
-        # Loop para percorrer cada elemento das matrizes e calcular a multiplicação
-        Para l de 0 até linhas-1 faça:
-            Para c de 0 até colunas-1 faça:
-                matrizResultado[l][c] <- 0
-                Para k de 0 até tamanho(matrizA[0])-1 faça:
-                    matrizResultado[l][c] <- matrizResultado[l][c] + (matrizA[l][k] * matrizB[k][c])
-
-        Retornar matrizResultado
-        
-# Exemplo de uso da função  
-investimentosAno1 <- [[1000, 2000], [1500, 2500]]  
-investimentosAno2 <- [[1200, 1800], [1300, 2700]]  
-
-totalInvestimentos <- MultiplicarMatrizesInvestimento(investimentosAno1, investimentosAno2)  
-Escrever("Total de investimentos acumulados:")  
-ImprimirMatriz(totalInvestimentos)  
-```
