@@ -19,8 +19,6 @@ for (let j = 0; j < valores.length; j++) {
 }
 
 console.log("O produto dos valores é:", produto);
-
-
 ```
 Qual das seguintes alternativas melhor descreve o que o código faz?
 
@@ -180,15 +178,15 @@ Dispositivo 3 ligado. Energia restante: 400
 Dispositivo 4 não pode ser ligado. Energia insuficiente.
 
 **D)**
-Dispositivo 1 ligado. Energia restante: 900
+**Dispositivo 1 ligado. Energia restante: 900**
 
-Dispositivo 2 ligado. Energia restante: 300
+**Dispositivo 2 ligado. Energia restante: 300**
 
-Dispositivo 3 ligado com bateria extra. Energia restante: 200
+**Dispositivo 3 ligado com bateria extra. Energia restante: 200**
 
-Dispositivo 4 não pode ser ligado. Energia insuficiente.
+**Dispositivo 4 não pode ser ligado. Energia insuficiente.**
 
-Dispositivo 5 não pode ser ligado. Energia insuficiente.
+**Dispositivo 5 não pode ser ligado. Energia insuficiente.***
 
 **Resposta: D**
 ______
@@ -316,7 +314,7 @@ Função calcularTempoPouso(velocidadeInicial, desaceleracao, velocidadeLimite, 
     
     #loop que vai calcular o valor da velocidade a cada instante de tempo
     Enquanto tempo <= tempoMaximo:
-        velocidade ← velocidadeInicial - desaceleracao * tempo
+        velocidade ← velocidadeInicial - (desaceleracao * tempo)
         
         Se (velocidade < velocidadeLimite) então:
             Imprima("Perigo de instabilidade no pouso!")

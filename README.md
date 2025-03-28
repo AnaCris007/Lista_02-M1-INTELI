@@ -1,0 +1,1 @@
+Resolução da segunda lista de exercícios de programação do Módulo 1 do Inteli (Instituto de Tecnologia e Liderança).
